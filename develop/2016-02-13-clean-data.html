@@ -173,7 +173,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -205,7 +205,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -219,7 +219,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[85]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -296,7 +296,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1"># Split df.Hours into days of week, start time, and end time (not done yet, obvs)</span>
@@ -311,7 +311,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/Users/tesskornfield/google_api_key.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
@@ -325,7 +325,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">lats</span> <span class="o">=</span> <span class="p">[]</span>
@@ -355,7 +355,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="p">[</span><span class="s1">&#39;lats&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lats</span>
@@ -369,7 +369,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">tileset</span> <span class="o">=</span> <span class="s1">r&#39;http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png&#39;</span>
@@ -378,12 +378,12 @@ div#notebook {
 
 <span class="k">for</span> <span class="n">row_index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
     
-    <span class="n">zip_map</span><span class="o">.</span><span class="n">simple_marker</span><span class="p">([</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;lats&#39;</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;lngs&#39;</span><span class="p">]],</span><span class="n">popup</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">])</span>
+    <span class="n">zip_map</span><span class="o">.</span><span class="n">simple_marker</span><span class="p">([</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;lats&#39;</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;lngs&#39;</span><span class="p">]],</span><span class="n">popup</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">, </span><span class="si">%s</span><span class="s1">, </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Address&#39;</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Hours&#39;</span><span class="p">]))</span>
 
 <span class="n">mappath</span> <span class="o">=</span> <span class="s1">&#39;orsters.html&#39;</span>
 <span class="n">zip_map</span><span class="o">.</span><span class="n">create_map</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">mappath</span><span class="p">)</span>
 
-<span class="n">IFrame</span><span class="p">(</span><span class="n">mappath</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="n">mappath</span><span class="p">,</span><span class="mi">1200</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -394,12 +394,12 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[103]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
         <iframe
-            width="600"
+            width="1200"
             height="500"
             src="orsters.html"
             frameborder="0"

@@ -50,13 +50,13 @@
 
 <body>
 
-   <div class="folium-map" id="folium_f25b7033aebb426293a3c195efde46e3" style="width: 100%; height: 100%"></div>
+   <div class="folium-map" id="folium_8a53dfcbd5164ab291c90ee5f0a08cb2" style="width: 100%; height: 100%"></div>
 
    <script>
 
       
 
-      var base_tile = L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+      var base_tile = L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.png', {
           maxZoom: 18,
           minZoom: 1,
           attribution: 'Map data by OpenStreetMap, under ODbL.'
@@ -94,9 +94,9 @@
       /*
       Creates the map and adds the selected layers
       */
-      var map = L.map('folium_f25b7033aebb426293a3c195efde46e3', {
+      var map = L.map('folium_8a53dfcbd5164ab291c90ee5f0a08cb2', {
                                        center:[37.76923, -122.43381],
-                                       zoom: 11,
+                                       zoom: 12,
                                        maxBounds: bounds,
                                        layers: [base_tile]
                                      });

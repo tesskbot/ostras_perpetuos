@@ -68,11 +68,11 @@ df['lats'] = lats
 df['lngs'] = lngs
 
 
-# In[14]:
+# In[21]:
 
-tileset = r'http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png'
+tileset = r'http://tile.stamen.com/terrain/{z}/{x}/{y}.png'
 attribution = 'Map data by OpenStreetMap, under ODbL.'
-zip_map = folium.Map(location=[37.769230, -122.433810], zoom_start=11, tiles=tileset, attr=attribution)
+zip_map = folium.Map(location=[37.769230, -122.433810], zoom_start=12, tiles=tileset, attr=attribution)
 
 for row_index, row in df.iterrows():
     
@@ -81,7 +81,7 @@ for row_index, row in df.iterrows():
 mappath = 'orsters.html'
 zip_map.create_map(path=mappath)
 
-IFrame(mappath,1200,500)
+IFrame(mappath,1200,550)
 
 
 # In[ ]:
